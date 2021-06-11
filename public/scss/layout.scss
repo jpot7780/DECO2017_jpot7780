@@ -1,0 +1,30 @@
+.app-container {
+  background-image: url('../../background.png');
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+  margin: 4em;
+  text-align: left;
+}
+
+.page-container {
+  background-color: rgba(217, 222, 251, .7);
+  &#home {
+    text-align: center;
+
+  }
+  &:not(#home) {
+    display: none;
+  }
+
+}
+
+.logo {
+  position: absolute;
+  top: 11px;
+  right: 25px;
+  width: 10%;
+}
+
+
+

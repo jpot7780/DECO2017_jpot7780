@@ -1,0 +1,36 @@
+#task-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "taskform tasklist";
+}
+
+#taskform  {
+    grid-area: taskform;
+    max-width: 300px;
+    margin:  0 auto;
+
+    label {
+        display: block;
+        width: 100%;
+    }
+}
+
+#tasklist {
+    grid-area: tasklist;
+}
+
+
+.sumbit-button {
+  color:#fff; 
+  background: #959ABA; 
+  cursor:pointer; 
+  padding:5px; 
+  width:90px; 
+  font-size:14px;
+  height : 50px;
+  border-radius : 10px;
+  height : 40px;
+  border: none;
+
+}

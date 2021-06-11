@@ -1,0 +1,63 @@
+
+
+.stopwatch-container {
+  background-color: rgba(236, 87, 96);
+  width: 160px;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px 0 rgba(252, 169, 169, 0.6);
+  display: flex;
+  padding: 50px 30px;
+  margin: 10px 0;
+  z-index: 10;
+}
+
+#timer{
+  width:200px;
+  margin:auto;
+  font-size:200%;
+  color:white;
+  display:block;
+  position: absolute;
+  top: 10px;
+  left: 60px;
+}
+
+#controls button{
+  border:none; 
+  color:#fff; 
+  cursor:pointer; 
+  padding:5px; 
+  width:90px; 
+  margin:auto;
+  font-size:14px;
+  height : 50px;
+  border-radius : 10px;
+
+}
+
+.timer-btn{
+  text-align: center;
+  color:white;
+  padding:25px;
+  border-radius:9px;
+  cursor:pointer;
+  display:inline-block;
+  margin:auto;
+}
+
+#start{
+  background-color:green;
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+}
+
+#stop{
+  background-color:red;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+}

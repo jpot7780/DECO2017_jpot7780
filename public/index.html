@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="scss/main.scss" rel="stylesheet" type="text/css">
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+	<img src="../logo.png" class="logo">
+</head>
+
+<body class="app-container">
+
+	<!-- Navigation Pages -->
+	<nav class="top-nav">
+		<ul class="nav-links">
+			<li class="nav-item"><a href=#home class="active">Home</a></li>
+			<li class="nav-item"><a href=#tasks>Tasks</a></li>
+			<li class="nav-item"><a href=#promodoro-page>Timer</a></li>
+			<li class="nav-item"><a href=#dictionary>Dictionary</a></li>
+
+		</ul>
+	</nav>
+
+	<!-- Music Player -->
+	<!-- todo: try moving the location of the music files -->
+	<div class="music-container" id="music-container">
+		<div class="music-info">
+		  <h4 id="title"></h4>
+		</div>
+  
+		<audio src="./music/Travelers.mp3" id="audio"></audio>
+  
+		<div class="navigation">
+		  <button id="prev" class="action-btn">
+			<i class="fas fa-backward"></i>
+		  </button>
+		  <button id="play" class="action-btn action-btn-big">
+			<i class="fas fa-play"></i>
+		  </button>
+		  <button id="next" class="action-btn">
+			<i class="fas fa-forward"></i>
+		  </button>
+		</div>
+	  </div>
+	
+
+	<!-- Stopwatch -->
+	<div class="stopwatch-container" id="stopwatch-container">
+		<span id="timer">00:00:00</span>
+		<br/>
+		<div id="controls">
+			<button id="start">Start</button>
+			<button id="stop">Stop</button>
+		</div>
+	</div>
+	
+	<!-- Home Page content -->
+	<div id="home" class="page-container">
+		<img src="../cards.png" width="950" height="350">
+		<br>
+		<br>
+		<br>
+	</div>
+
+	<!-- Task Page sub navigation -->
+	<div id="tasks" class="page-container">
+		<nav class="sub-nav">
+			<ul class="nav-links">
+				<li class="nav-item"><a href="#add-new-task" class="active">Add New Task</a></li>
+				<li class="nav-item"><a href="#tasks-board">Tasks Board</a></li>
+			</ul>
+		</nav>
+
+		<!-- Adding new Task sub page -->
+		<div id="add-new-task" class="sub-page-container">
+			<div id="task-grid">
+				<form id="taskform">
+					<br>
+					<label for="task">Task:</label>
+					<input type="text" name="task" id="taskInput">
+			  
+					<br>
+				  <!-- Date input -->
+					<label for="dueDate">Due Date: </label>
+					<input type="date" name="dueDate" id="dueDateInput">
+					<br>
+				  <!-- Time input -->
+				  <label for="completionTime">Completion Time: </label>
+					<input type="time" name="completionTime" id="completionTimeInput">
+			  
+					<br>
+			  
+				  <label for="estimatedTime">Estimated completion time (in mins):</label>
+				  <input type="number" name="estimatedTime" id="estimatedTimeInput">
+				  <!-- Priority -->
+				  <br>
+			  
+				  <label for="priority">Task Priority:</label>
+				  <select name="prority" id="priorityInput">
+					<option value="">Select one</option>
+					<option value="Low">Low</option>
+					<option value="Medium">Medium</option>
+					<option value="High">High</option>
+				  </select>
+			  
+				  <br>
+				  <br>
+			  
+					<button class="sumbit-button" type="submit">Submit</button>
+
+				<br>
+				<br>
+				  </form>
+				  <div id="tasklist">
+					<p id="emptyList">You have not added any tasks yet.</p>
+					<ul></ul>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Kanban Board sub Page -->
+		<div id="tasks-board" class="sub-page-container">
+			<ul class="columns">
+		  
+			  <li class="column to-do-column">
+				<div class="column-header">
+				  <h4>To Do</h4>
+				</div>
+				<ul class="task-list" id="to-do">
+				  <li class="task">
+					<p>Eg Task 1</p>
+				  </li>
+				</ul>
+			  </li>
+		  
+			  <li class="column doing-column">
+				<div class="column-header">
+				  <h4>Doing</h4>
+				</div>
+				<ul class="task-list" id="doing">
+				  <li class="task">
+					<p>Eg Task 2</p>
+				  </li>
+				</ul>
+			  </li>
+		  
+			  <li class="column done-column">
+				<div class="column-header">
+				  <h4>Done</h4>
+				</div>
+				<ul class="task-list" id="done">
+				  <li class="task">
+					<p>Eg Task 3</p>
+				  </li>
+				</ul>
+			  </li>
+		  
+		  
+			</ul>
+			<br>
+		  </div>
+	</div>
+		
+	<!-- Pomodoro Timer Page -->
+	<div id="promodoro-page" class="page-container">
+		<h1>Pomodoro Timer</h1>
+
+		<div id="promodoro-container">
+			<div id="promodoro-timer">
+			  <div id="time">
+				<span id="minutes">25</span>
+				<span id="separator">:</span>
+				<span id="seconds">00</span>
+			  </div>
+			</div>
+		
+			<div id="buttons">
+			  <button id="promodorostop">Stop</button>
+			  <br>
+			  <button id="promodoro">Promodoro</button>
+			  <button id="shortBreak">Short Break</button>
+			  <button id="longBreak">Long Break</button>
+			</div>
+		  </div>
+		  <br>
+
+	</div>
+
+	<!-- Dictionary Page -->
+	<div id="dictionary" class="page-container">
+		<h1>Dictionary</h1>
+		<form id="dictionaryform">
+			<fieldset id="fieldset">
+				<label htmlFor="word">Enter Word</label>
+				<!-- create text input -->
+				<input id='word-input' type="text" class="form-control" name="word" placeholder="...">
+				<!-- create submit button -->
+				<input value="Submit" type="submit" style="margin: 10px" class="btn-btn-primary" />
+			</fieldset>
+		</form>
+		
+		<!-- empty list to place our word data -->
+		<ul id="word-info" class="list-unstyled"></ul>
+		<br>
+
+	</div>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js'></script>
+	<script type="module" src="script.js"></script>
+
+
+</body>
+
+</html>
